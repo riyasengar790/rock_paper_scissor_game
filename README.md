@@ -3,7 +3,7 @@ Welcome to the Rock-Paper-Scissors game repository! This Python project allows u
 
 ## Getting Started
 **Clone the Repository**: Clone this repository to your local machine using the following command:
-git clone https://github.com/your-username/rock-paper-scissors.git
+https://github.com/riyasengar790/rock_paper_scissor_game.git
 
 **Run the Game**: Execute the rps_game.py script to start playing:
 python rps_game.py
