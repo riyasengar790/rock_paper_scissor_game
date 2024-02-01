@@ -1,0 +1,74 @@
+import random
+import pyfiglet
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+items = ["rock","paper","scissor"]
+computer_guess = random.choice(items)
+user_input = input("What do you choose?  Rock, Paper or Scissors.\n").lower()
+s = "computer guess"  
+print(pyfiglet.figlet_format(s)) 
+print(pyfiglet.figlet_format(computer_guess,font='Digital'))  
+if computer_guess=='rock':
+    print(rock)   
+elif computer_guess=='scissor':
+    print(scissors)  
+elif computer_guess=='paper':
+    print(paper)  
+u = "User guess"  
+print(pyfiglet.figlet_format(u))  
+print(pyfiglet.figlet_format(user_input,font='Digital')) 
+if user_input=='rock':
+    print(rock)   
+elif user_input=='scissor':
+    print(scissors)  
+elif user_input=='paper':
+    print(paper)              
+if  computer_guess != user_input:
+    if computer_guess=='rock':
+        if user_input=='paper':
+            a = 'you win'
+            print(pyfiglet.figlet_format(a,font='Digital'))
+        elif user_input=='scissor':
+            b='you lose'
+            print(pyfiglet.figlet_format(b,font='Digital'))   
+    elif computer_guess =='paper':
+        if user_input=='scissor':
+            c='you win'
+            print(pyfiglet.figlet_format(c,font='Digital'))
+        elif user_input=='rock':
+            d='you lose'
+            print(pyfiglet.figlet_format(d,font='Digital'))
+    elif computer_guess=='scissor':
+        if user_input=='rock':
+            e='you win'
+            print(pyfiglet.figlet_format(e,font='Digital'))
+        elif user_input=='paper':
+            f='you lose'
+            print(pyfiglet.figlet_format(f,font='Digital'))
+else :
+    g="draw"
+    print(pyfiglet.figlet_format(g,font='Digital'))
